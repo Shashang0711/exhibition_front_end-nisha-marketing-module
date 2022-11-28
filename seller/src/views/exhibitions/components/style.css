@@ -1,0 +1,10 @@
+.my-exhi-card{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.my-exhi-card .edit-btn{
+    position: absolute;
+    top: 8px;
+    right: 40px;
+}

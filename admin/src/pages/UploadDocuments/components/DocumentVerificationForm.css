@@ -1,0 +1,102 @@
+/* Style the form */
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+  }
+  
+  /* Style the input fields */
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #04AA6D;
+  }
+
+  
+.app-step{
+  display: flex;
+  justify-content: center;
+  background: #ebedef;
+  border-radius: 5px;
+}
+
+.app-step .step {
+  border: none;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 50px;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.app-step .step:first-child {
+  border-radius: 0 50px 50px 0;
+}
+
+.app-step .step:last-child {
+  border-radius: 50px 0 0 50px;
+  margin-right: 0;
+}
+
+.app-step .step span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  min-width: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.app-step .step.active {
+  background: #F9C337;
+}
+
+.app-step .step.active span{
+  background: #fff;
+}
+
+.app-step .step.finish {
+  background-color: #04AA6D;
+}
+
+@media(max-width: 767px){
+  .app-step{
+      display: block;
+  }
+  .app-step .step {
+      border-radius: 0 !important;
+      margin-right: 0 !important;
+  }
+}
+
+.card-header{
+  background: #fff;
+}

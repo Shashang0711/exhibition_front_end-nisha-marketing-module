@@ -1,0 +1,7 @@
+.form-check-label{
+    cursor: pointer;
+}
+.form-check-input:checked {
+    background-color: #f9c337;
+    border-color: #f9c337;
+}

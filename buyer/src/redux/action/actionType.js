@@ -1,0 +1,8 @@
+export const USER_AUTH = "USER_AUTH";
+export const USER_AUTH_ERROR = "USER_AUTH_ERROR";
+export const TAB_HISTORY = "TAB_HISTORY"
+export const TAB_HISTORY_BACK = "TAB_HISTORY_BACK";
+export const PAGE_LOADER = "PAGE_LOADER";
+export const SEARCH_QUERY = "SEARCH_QUERY";
+export const RESET_TAB_HISTORY = "RESET_TAB_HISTORY"
+export const CART_COUNT = "CART_COUNT";

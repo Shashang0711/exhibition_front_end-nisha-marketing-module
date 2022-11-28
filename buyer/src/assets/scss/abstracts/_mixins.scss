@@ -1,0 +1,29 @@
+@mixin both-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+@mixin justify-center {
+    display: flex;
+    justify-content: center;
+}
+@mixin all-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin vert-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin horz-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

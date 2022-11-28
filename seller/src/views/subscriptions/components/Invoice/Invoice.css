@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+p {
+    margin: 0
+}
+
+.textmuted {
+    color: #7a7a7a
+}
+
+.bg-green {
+    background-color: #d4f8f2;
+    color: #06e67a;
+    padding: 3px 0;
+    display: inline;
+    border-radius: 25px;
+    font-size: 11px
+}
+
+.p-blue {
+    font-size: 14px;
+    color: #1976d2
+}
+
+.fas.fa-circle {
+    font-size: 12px
+}
+
+.p-org {
+    font-size: 14px;
+    color: #fbc02d
+}
+
+
+.bg-blue {
+    background-color: #dfe9fc9c;
+    border-radius: 5px
+}
+
+.form-control {
+    box-shadow: none !important
+}
+
+.card input::placeholder {
+    font-size: 14px
+}
+
+::placeholder {
+    font-size: 14px
+}
+
+input.card {
+    position: relative
+}
+
+.far.fa-credit-card {
+    position: absolute;
+    top: 10px;
+    padding: 0 15px
+}
+
+.fas,
+.far {
+    cursor: pointer
+}
+
+.cursor {
+    cursor: pointer
+}
+
+.bg-blue a{
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.invoice-header ul{
+    list-style: none;
+}
+
+.invoice-header ul li {
+    font-weight: 500;
+    color: #000;
+}
+
+.invoice-header ul li span{
+    font-weight: 600;
+}
+
+.invoice-header ul li.address{
+    max-width: 200px;
+    margin-left: auto;
+}

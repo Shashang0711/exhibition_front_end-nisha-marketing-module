@@ -1,0 +1,29 @@
+.cardColor {
+    background-color: #f7f7f8;
+}
+
+.cardIcon {
+    margin-right: 2%;
+    height: 55px;
+    width: 55px;
+    background-color: #303c54;
+}
+
+.svg-img {
+    position: relative !important;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%) !important;
+    transform: translateX(-50%) !important;
+    height: 100% !important;
+    width: 62% !important;
+    color: white;
+}
+
+.linkText{
+    word-break: break-all;
+}
+
+.ex-details-card .app-icon{
+    min-width: 50px;
+}

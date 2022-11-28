@@ -1,0 +1,32 @@
+.product-data-wrap {
+    word-break: break-all;
+}
+
+.wrapper {
+  text-align: center;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+}
+
+.imageContainer {
+  max-width: 150px;
+  max-height: 150px;
+  position: relative;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.chips {
+  overflow-x: hidden;
+}
+
+.underlineStyle {
+  text-decoration: underline;
+  font-weight: 500;
+}

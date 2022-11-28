@@ -1,0 +1,12 @@
+.scrollableCard {
+    overflow-x: auto;
+}
+
+.sorting-th * {
+    pointer-events: none;
+}
+.roleModal .form-check-input{
+   position: unset !important;
+   margin: 0 !important;
+
+}

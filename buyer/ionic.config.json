@@ -1,0 +1,7 @@
+{
+    "name": "hypestreet",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "react"
+}

@@ -1,0 +1,24 @@
+.error-msg {
+    color: red;
+}
+.showPass{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+}
+
+.showPass img{
+    max-width: 20px;
+}
+
+.header-brand img{
+    max-width: 180px;
+}
+
+@media(max-width: 400px){
+    .header-brand img{
+        max-width: 110px;
+    }
+}

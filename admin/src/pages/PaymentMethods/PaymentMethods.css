@@ -1,0 +1,8 @@
+.scrollableCard {
+    overflow-x: auto;
+}
+
+
+.sorting-th * {
+    pointer-events: none;
+}

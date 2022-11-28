@@ -1,0 +1,310 @@
+.main-wrapper {
+    flex: 1 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    font-weight: normal;
+    background: #DFDFDF;
+}
+html {
+    height: 100%;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+    height: 6px;
+	background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 0;
+	background-color: #8A94A6;
+}
+
+form {
+    label {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 1px;
+        font-weight: 500;
+        color: $black-color;
+        span{
+            color: red;
+        }
+    }
+    textarea {
+        min-height: 160px;
+        max-height: 160px;
+    }
+    .app-input {
+        padding: 5px 10px;
+        background: #FFFCF9;
+        border: 1px solid #F5F1EE;
+        border-radius: 5px;
+        color: $black-color;
+        display: inline-block;
+        font-size: 12px;
+        width: 100%;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        -webkit-appearance: none;
+        position: relative;
+        transition: 0.3s all;
+        font-weight: 400;
+        &:focus {
+            outline: none;
+            border: 0;
+            background: $white-color;
+            box-shadow: none;
+            border: 1px solid $primary-color
+        }
+        + .icon{
+            @include vert-center;
+            left: 10px;
+            line-height: 0;
+        }
+    }
+    .form-group {
+        position: relative;
+        margin-bottom: 15px;
+        &.icon{
+            .app-input{
+                padding-left: 40px !important;
+            }
+        }
+        p{
+            font-size: 12px;
+            color: var(--light-color);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+input,textarea,select {
+    &:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 1000px #FFFCF9 inset !important;
+        -webkit-text-fill-color: $secondary-color !important;
+        transition: background-color 5000s ease-in-out 0s;
+        &:focus{
+        -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+
+        }
+    }
+}
+
+.remember {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    .custom-check-box {
+        font-size: 12px;
+        line-height: 1.5;
+        color: $black-color;
+        display: block;
+        position: relative;
+        padding-left: 20px;
+        font-weight: 400;
+        margin-bottom: 0;
+        cursor: pointer;
+        user-select: none;
+        text-transform: inherit;
+
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            background: $theme-bg;
+            width: 13px;
+            height: 13px;
+            border-radius: 3px;
+            border: 1.5px solid $black-color;
+            transition: $transition;
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 3.5px;
+                top: 0.5px;
+                width: 3px;
+                height: 7px;
+                border: solid $black-color;
+                border-width: 0 1.5px 1.5px 0;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                transition: $transition;
+            }
+        }
+        input {
+            &:checked {
+                &~.checkmark {
+                    background: $secondary-color;
+
+                    &:after {
+                        display: block;
+                        border-color: $white-color;
+                    }
+                }
+            }
+        }
+        a {
+            color: $primary-color;
+        }
+    }
+    .forgot-pass{
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $secondary-color;
+        margin-left: 10px;
+        &:hover{
+            color: $primary-color;
+        }
+        @media(max-width: 480px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.already {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        margin-bottom: 0;
+        color: $black-color;
+        a {
+            color: $primary-color;
+            transition: 0.3s all;
+            font-weight: 600;
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+        @media(max-width: 375px) {
+            font-size: 14px !important;
+        }
+    }
+}
+
+.app-btn{
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: $secondary-color;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    padding: 13px 20px;
+    transition: $transition;
+
+    &:disabled {
+        opacity:0.5
+    }
+    
+    @media(max-width: 370px) {
+        font-size: 12px;
+    }
+
+    @media(max-width: 330px) {
+        font-size: 10px;
+    }
+
+    &:hover {
+        background: $primary-color;
+        color: #fff;
+    }
+
+    &.outline {
+        background: transparent;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+
+        &:hover {
+            background: $primary-color;
+            color: #fff;
+            border: 1px solid $primary-color;
+        }
+
+    }
+}
+
+.app-search{
+    margin-bottom: 23px;
+    .input-group {
+        input{
+            background: #FFFFFF;
+            border: 1px solid #F5F1EE;
+            border-radius: 15px;
+            margin-right: -15px;
+            padding: 5px 40px;
+            font-size: 12px;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        .btn{
+            padding: 10px;
+            border-radius: 15px !important;
+            display: flex;
+            background: $primary-color;
+            border: 0;
+            z-index: 9;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+                border: 0;
+            }
+        }
+        .search{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+    }
+}
+
+.error-msg{
+    font-size: 12px;
+}
+
+.sub-text {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 14px;
+    color: $black-color;
+}
