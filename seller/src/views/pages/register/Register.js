@@ -340,3 +340,166 @@ const Register = () => {
 }
 
 export default Register
+
+// import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+// import "../SignUp/signup.css";
+// const Signup = () => {
+//   const initialValue = {
+//     username: "",
+//     email: "",
+//     mobilenumber: "",
+//     password: "",
+//     // address: "",
+//   };
+//   const [data, setdata] = useState(initialValue);
+//   const [formError, setFormError] = useState({});
+//   const [isSubmit, setIsSubmit] = useState(false);
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setdata({ ...data, [name]: value });
+//     if (formError[name]) {
+//       setFormError((state) => {
+//         let errorNew = { ...state };
+//         delete errorNew[name];
+//         return errorNew;
+//       });
+//     }
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setFormError(validate(data));
+//     setIsSubmit(true);
+//   };
+//   useEffect(() => {
+//     if (Object.keys(formError).length === 0 && isSubmit) {
+//     }
+//   }, [formError]);                      
+
+//   const validate = (values) => {
+//     const error = {};
+//     const regex = /[a-z A-Z 0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}$/i;                                           // /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/i;
+
+//     if (!values.username) {
+//       error.username = "Username is empty";
+//     }
+
+//     if (!values.email) {
+//       error.email = "email is empty";
+//     } else if (!regex.test(values.email)) {
+//       error.email = "This is not a valid email";
+//     }
+
+//     if (!values.mobilenumber) {
+//       error.mobilenumber = "mobile number is empty";
+//     }
+
+//     if (!values.password) {
+//       error.password = "password is empty";
+//     } else if (values.password.length < 5) {
+//       error.password = "Pasword must be more than 5 character";
+//     } else if (values.password.length > 10) {
+//       error.password = "Pasword cannot exceed more than 10 character";
+//     }
+//     // if (!values.address) {
+//     //   error.address = "address is empty";
+//     // }
+//     return error;
+//   };
+
+//   return (
+//     <div>
+//       <div className="signup-container">
+//         {/* {Object.keys(formError).length === 0 && isSubmit ? (
+//           <div className="ui message success">Sign in Successfully</div>
+//         ) : (
+//           ""
+//         )} */}
+//         <form className="signup-form" onSubmit={handleSubmit}>
+//           <p>Register</p>
+
+//           <div className="field">
+//             <label>Your Name</label>
+//             <input
+//               onChange={handleChange}
+//               type="text"
+//               name="username"
+//               autocomplete="off"
+//               placeholder="First and last name"
+//               value={data.username}
+//             />
+//           </div>
+//           <h5>{formError.username}</h5>
+//           <div className="field">
+//             <label>Mobile Number</label>
+//             <input
+//               onChange={handleChange}
+//               onKeyDown={(event) => {
+//                 const length = event.target.value.length;
+//                 if (event.key === "Backspace") return;
+//                 if (!/([0-9])/.test(event.key) || length + 1 > 10) {
+//                   event.preventDefault();
+//                 }
+//               }}
+//               type="number"
+//               // max={9999999999}
+//               name="mobilenumber"
+//               autocomplete="off"
+//               placeholder="Mobile Number"
+//               value={data.mobilenumber}
+//             />
+//             <h5>{formError.mobilenumber}</h5>
+//           </div>
+
+//           <div className="field">
+//             <label>Email</label>
+//             <input
+//               onChange={handleChange}
+//               type="email"
+//               name="email"
+//               autocomplete="off"
+//               placeholder="Enter your email"
+//               value={data.email}
+//             />
+//           <h5>{formError.email}</h5>
+//           </div>
+
+//           <div className="field">
+//             <label>Password</label>
+//             <input
+//               onChange={handleChange}
+//               type="password"
+//               name="password"
+//               autocomplete="off"
+//               placeholder="Enter your password"
+//               value={data.password}
+//             />
+//           <h5>{formError.password}</h5>
+//           </div>
+//           {/* 
+//           <div className="field">
+//             <label>Address</label>
+//             <input
+//               onChange={handleChange}
+//               type="text"
+//               name="address"
+//               placeholder="Enter your address"
+//               value={data.address}
+//             ></input> */}
+
+//           <button type="submit" >Sign up</button>
+
+//           <div>
+//             <span>Already have an account?</span>
+//             <Link to="/login">Sign In</Link>
+//           </div>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Signup;
+

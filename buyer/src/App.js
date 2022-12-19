@@ -8,7 +8,7 @@ import AppUrlListener from './services/appUrlListener';
 
 // Pages
 const Login = React.lazy(() => import('./views/pages/login/Login'));
-const Register = React.lazy(() => import('./views/pages/register/Register'));
+// const Register = React.lazy(() => import('./views/pages/register/Register'));
 const OTP = React.lazy(() => import('./views/pages/otp/Otp'));
 const Page404 = React.lazy(() => import('./views/pages/page404/Page404'));
 const DefaultLayout = React.lazy(() => import('./views/defaultLayout/DefaultLayout'));
@@ -39,7 +39,7 @@ function App() {
               <Route exact path="/" name="Login Page" element={<Login />} />
               <Route exact path="/login" name="Login Page" element={<Login />} />
               <Route exact path='/submit-otp' name="Enter OTP" element={<OTP />} />
-              <Route exact path="/register" name="Register Page" element={<Register />} />
+              {/* <Route exact path="/register" name="Register Page" element={<Register />} /> */}
               <Route exact path="/forgetpassword" name="ForgetPassword Page" element={<ForgetPassword />} />
               <Route exact path="/reset-password/:token" name="resetPassword Page" element={<ResetPassword />} />
             </Route>

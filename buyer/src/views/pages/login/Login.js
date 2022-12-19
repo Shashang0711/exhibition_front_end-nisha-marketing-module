@@ -13,7 +13,7 @@ import loginPng from '../../../assets/images/login.png';
 import user_input from '../../../assets/images/icon/user-input.svg';
 import password_input from '../../../assets/images/icon/password-input.svg';
 import phone_input from '../../../assets/images/icon/phone-input.svg';
-import Register from '../register/Register';
+// import Register from '../register/Register';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -216,7 +216,7 @@ const Login = () => {
                     </form>
                 </div>
 
-                <Register activeTab={activeTab} setActiveTab={setActiveTab} mobileNum={mobileNum} />
+                {/* <Register activeTab={activeTab} setActiveTab={setActiveTab} mobileNum={mobileNum} /> */}
 
             </div>
             <div className="social-login">

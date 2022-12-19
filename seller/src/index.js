@@ -38,7 +38,7 @@ axios.interceptors.response.use(
   },
   error => {
     if (error.response.status === 401) {
-      toast.error("Your token is expired please login agin")
+      toast.error("Your token is expired please login again")
       localStorage.removeItem('user');
       localStorage.removeItem('userToken');
       localStorage.removeItem('persist:root');
@@ -57,7 +57,5 @@ createRoot(document.getElementById('root')).render(
   </Provider>,
 )
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals()

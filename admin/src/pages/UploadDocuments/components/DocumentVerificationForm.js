@@ -101,8 +101,9 @@ const DocumentVerificationForm = () => {
               </span>
               <CCardBody>
                 <div className='app-step mb-4'>
-                  <div className={isActive(0)}><span>1</span>Identity Proof</div>
-                  <div className={isActive(1)}><span>2</span>Account Statement of Last 6 Months</div>
+                <div className={isActive(0)}><span>1</span>Register</div>
+                  <div className={isActive(1)}><span>2</span>Identity Proof</div>
+                  <div className={isActive(2)}><span>3</span>Account Statement of Last 6 Months</div>
                 </div>
                 <CRow>
                   <CCol xs={0} lg={6}>

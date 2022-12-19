@@ -85,7 +85,7 @@ const Login = () => {
   }
 
   const resendOtp = async () => {
-    setTimer(30);
+    setTimer(60);
     const mobileNo = state.mobileNo
     const resendOtp = await AuthService.resendOtp({ mobileNo });
     if (resendOtp.status === 200 || resendOtp.status === '200') {
@@ -105,9 +105,9 @@ const Login = () => {
             <CCard className="p-2 p-md-4">
               <CCardBody className='CCardBody'>
                 <div className='text-center mb-4'>
-                  <h3>Enter the 4 digit OTP</h3>
+                  <h3>Enter the 5 digit OTP</h3>
                   <p>
-                    Enter the 4 digit OTP that you have received on your given mobile number.
+                    Enter the 5 digit OTP that you have received on your given mobile number.
                   </p>
                   {/* <Link to="/register">
                         <CButton color="primary" className="mt-3" active tabIndex={-1}>
@@ -119,7 +119,7 @@ const Login = () => {
                   <OtpInput
                     value={otp}
                     onChange={handleOTPChange}
-                    numInputs={4}
+                    numInputs={5}
                     separator={<span style={{ width: "8px" }}></span>}
                     isInputNum={true}
                     shouldAutoFocus={true}
@@ -150,7 +150,7 @@ const Login = () => {
                   <br />
                   <div className="d-grid gap-2 mb-4 mt-2">
                     {
-                      otp && otp.length === 4 ?
+                      otp && otp.length === 5 ?
                         <CButton type="submit">Submit</CButton>
                         :
                         <CButton type="submit" disabled>Submit</CButton>
